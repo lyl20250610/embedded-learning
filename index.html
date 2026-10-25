@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>嵌入式学习平台 · 从C语言到嵌入式Linux</title>
+<meta name="description" content="系统化嵌入式学习网站：C语言、51单片机、STM32、FreeRTOS、嵌入式Linux，含实战课程与自测题库">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="logo" href="index.html"><span class="mark">&lt;/&gt;</span>嵌入式学习平台</a>
+    <button class="menu-btn">☰</button>
+    <div class="nav-links">
+      <a href="index.html" data-page="home">首页</a>
+      <a href="courses.html" data-page="courses">课程</a>
+      <a href="quiz.html" data-page="quiz">自测</a>
+      <a href="resources.html" data-page="resources">资源</a>
+      <a href="courses.html" class="nav-cta">开始学习</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">⚡ 从入门到系统级 · 全免费 · 纯离线可访问</span>
+      <h1>把嵌入式开发<span class="grad">真正学会</span><br>从一行C代码到一块Linux板子</h1>
+      <p class="lead">五门课程、26节精讲、18道自测题：C语言底层功底 → 51单片机入门 → STM32外设实战 → FreeRTOS多任务 → 嵌入式Linux。每一步都有代码、有原理、有踩坑指南。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="courses.html">进入课程 →</a>
+        <a class="btn btn-ghost" href="quiz.html">先测测基础</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">5</div><div class="lbl">系统化课程</div></div>
+        <div><div class="num">26</div><div class="lbl">精讲课时</div></div>
+        <div><div class="num">18</div><div class="lbl">自测题库</div></div>
+        <div><div class="num" id="statDone">0</div><div class="lbl">你已完成的课时</div></div>
+      </div>
+    </div>
+    <div class="term-card">
+      <div class="term-head">
+        <i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i>
+      </div>
+      <div class="term-body">
+<span class="ln"><span class="c-green">$</span> gcc -O2 firmware.c -o firmware.elf</span>
+<span class="ln"><span class="c-gray"># 编译通过, 代码区 4.2KB, 数据区 96B</span></span>
+<span class="ln"><span class="c-green">$</span> openocd -f stlink.cfg -c "program firmware.elf"</span>
+<span class="ln"><span class="c-cyan">** Programming Started **</span></span>
+<span class="ln"><span class="c-cyan">** Programming Finished **</span></span>
+<span class="ln"><span class="c-green">$</span> ./serialmon /dev/ttyUSB0 115200</span>
+<span class="ln"><span class="c-amber">[BOOT]</span> sensor init ok, id=0x68</span>
+<span class="ln"><span class="c-amber">[LOOP]</span> temp=25.3C  duty=0.62</span>
+<span class="ln"><span class="c-amber">[LOOP]</span> temp=25.4C  duty=0.58</span>
+<span class="ln"><span class="c-purple">♥ 你的第一块板子跑起来了</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-head">
+    <div class="kicker">Learning Path</div>
+    <h2>五步学习路径</h2>
+    <p>不建议跳步：嵌入式是层层依赖的技术栈，语言功底决定你能走多远。</p>
+  </div>
+  <div class="grid grid-3" id="pathGrid"></div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <div class="kicker">Courses</div>
+    <h2>课程总览</h2>
+    <p>学习进度自动保存在浏览器本地，随时回来继续。</p>
+  </div>
+  <div class="grid grid-3" id="courseGrid"></div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="section-head">
+    <div class="kicker">Why Here</div>
+    <h2>这个网站的特点</h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="icon">🧭</div>
+      <h3>主线清晰，不贩卖焦虑</h3>
+      <p>按真实项目需要组织知识：每一课都能对应到"点灯、通信、采集、控制"中的一个具体场景，学完就能上手做东西。</p>
+    </div>
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>全部带可运行代码</h3>
+      <p>从51的寄存器操作到FreeRTOS任务通信，示例代码都来自真实工程骨架，不是玩具片段。代码高亮、可直接复制。</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚠️</div>
+      <h3>踩坑经验前置</h3>
+      <p>volatile忘了加、I2C地址没左移、printf卡死、栈溢出随机死机……新手必踩的坑，在课程里提前标注。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="col" style="max-width:340px">
+      <h5>嵌入式学习平台</h5>
+      <p style="font-size:13.5px">一个系统化的嵌入式技术学习站点。进度保存在你自己的浏览器中，不上传任何数据。</p>
+    </div>
+    <div class="col">
+      <h5>学习</h5>
+      <a href="courses.html">全部课程</a>
+      <a href="quiz.html">知识自测</a>
+      <a href="resources.html">工具与书单</a>
+    </div>
+    <div class="col">
+      <h5>课程直达</h5>
+      <a href="course.html?id=c-basics">C语言与嵌入式编程基础</a>
+      <a href="course.html?id=mcu51">51单片机从零入门</a>
+      <a href="course.html?id=stm32">STM32开发实战</a>
+      <a href="course.html?id=rtos">FreeRTOS实时操作系统</a>
+      <a href="course.html?id=embedded-linux">嵌入式Linux基础</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 嵌入式学习平台 · Built with vanilla HTML/CSS/JS</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
